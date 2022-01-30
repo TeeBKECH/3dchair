@@ -1,8 +1,7 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import * as THREE from "three";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader"
 import {useLoader} from "react-three-fiber";
-import {useRef, useEffect} from "react";
 
 const INITIAL_MTL = new THREE.MeshPhongMaterial({
     color: new THREE.Color(0xf1f1f1),
@@ -15,7 +14,7 @@ const INITIAL_MAP = [
     {childID: "cushions", mtl: INITIAL_MTL},
     {childID: "legs", mtl: INITIAL_MTL},
     {childID: "supports", mtl: INITIAL_MTL}
-    ];
+];
 
 const initColor = (parent, type, mtl) => {
     parent.traverse(o => {

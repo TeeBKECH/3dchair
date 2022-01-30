@@ -19,7 +19,7 @@ export const Scene = ({newMaterialOpt}) => {
         scene.background = new THREE.Color(0x19afca);
         scene.fog = new THREE.Fog(0x19afca, 20, 100);
         camera.fov = 50;
-        directionalLight.shadow.mapSize = new THREE.Vector2(1024, 1024)
+        directionalLight.shadow.mapSize = new THREE.Vector2(1024, 1024);
         shadowMap.enabled = true;
         console.log(scene);
     }, [])
